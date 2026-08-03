@@ -61,7 +61,7 @@ jobs:
           gitleaks version
 
       - name: Gitleaks Code Scan
-        run: gitleaks dir . --report-path gitleaks-report.json --report-format json
+        run: gitleaks detect source . -r gitleaks-report.json -f json
 
   test:
     runs-on: self-hosted
